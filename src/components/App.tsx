@@ -8,6 +8,7 @@ function App() {
       {logements.map((logement) => (
         <Thumbnails
           key={logement.id}
+          logementId={logement.id}
           imgSrc={logement.cover}
           title={logement.title}
         />

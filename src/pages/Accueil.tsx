@@ -1,5 +1,5 @@
 import App from "../components/App.tsx";
-import Banner from "../components/banner.tsx";
+import Banner from "../components/Banner.tsx";
 import bannerImage from "../assets/banner_plage.png";
 
 function Accueil() {

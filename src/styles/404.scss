@@ -1,0 +1,16 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+  padding: 50px 20px;
+  h1 {
+    font-size: 10rem;
+    color: #ff6060;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.5rem;
+    color: #ff6060;
+  }
+}

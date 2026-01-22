@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import logoHeader from "../assets/logo_Kasa.png";
 import "../styles/Header.scss";
 
@@ -8,10 +9,10 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <a href="/">Accueil</a>
+            <NavLink to="/">Accueil</NavLink>
           </li>
           <li>
-            <a href="/apropos">A Propos</a>
+            <NavLink to="/apropos">A Propos</NavLink>
           </li>
         </ul>
       </nav>
