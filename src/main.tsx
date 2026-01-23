@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./components/Header.tsx";
-import Accueil from "./pages/Accueil";
-import Apropos from "./pages/Apropos";
+import Accueil from "./pages/Accueil.tsx";
+import Apropos from "./pages/Apropos.tsx";
 import Logement from "./pages/Logement.tsx";
 import ErrorPage from "./pages/404.tsx";
 import Footer from "./components/Footer.tsx";
