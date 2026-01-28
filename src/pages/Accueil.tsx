@@ -7,7 +7,12 @@ function Accueil() {
     <div className="accueil">
       <Banner
         backgroundImage={bannerImage}
-        title="Chez nous, partout et ailleurs"
+        title={
+          <>
+            Chez nous,
+            <wbr /> partout et ailleurs
+          </>
+        }
       />
       <App />
     </div>

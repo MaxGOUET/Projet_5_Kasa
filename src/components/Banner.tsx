@@ -1,10 +1,11 @@
 import "../styles/Banner.scss";
+import type { ReactElement } from "react";
 
 function Banner({
   title,
   backgroundImage,
 }: {
-  title?: string;
+  title?: string | ReactElement;
   backgroundImage: string;
 }) {
   return (
@@ -14,7 +15,7 @@ function Banner({
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
-      <h1>{title}</h1>
+      {title && <h1>{title}</h1>}
     </div>
   );
 }

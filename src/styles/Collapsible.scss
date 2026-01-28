@@ -1,0 +1,29 @@
+.Collapsible {
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+  }
+  h2 {
+    background-color: #ff6060;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+  }
+  img {
+    width: 24px;
+    height: 13px;
+    transition: transform 0.4s;
+  }
+  &.open {
+    img {
+      transform: rotate(-180deg);
+    }
+    .content {
+      max-height: 120px;
+    }
+  }
+}

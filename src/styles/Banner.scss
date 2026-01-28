@@ -9,7 +9,11 @@
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
+  @media screen and (max-width: 768px) {
+    height: 110px;
+  }
   h1 {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,5 +25,12 @@
     margin: 0;
     background-color: rgba(0, 0, 0, 0.585);
     border-radius: 25px;
+    @media screen and (max-width: 768px) {
+      font-size: 1.3rem;
+      height: 110px;
+      text-align: start;
+      padding: 20px;
+      text-wrap: nowrap;
+    }
   }
 }
