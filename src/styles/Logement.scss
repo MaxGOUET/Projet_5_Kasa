@@ -1,0 +1,43 @@
+.logementInfos {
+  display: flex;
+  justify-content: space-between;
+  .logementContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .titleContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-size: 24px;
+        color: #ff6060;
+        margin: 0;
+      }
+      p {
+        font-size: 16px;
+        color: #000000;
+        margin: 5px 0 0 0;
+      }
+    }
+  }
+  .hostContainer {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    p {
+      font-size: 18px;
+      color: #ff6060;
+      margin: 0;
+      flex-basis: min-content;
+      text-align: right;
+      padding-top: 10px;
+    }
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
