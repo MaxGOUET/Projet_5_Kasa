@@ -7,7 +7,7 @@ let firstTime = true;
 function Carousel({ pictures }: { pictures: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(pictures.length > 1 ? 1 : 0);
   const [transitionTime, setTransitionTime] = useState(0.5);
-  const [toto] = useState(() => {
+  const [_] = useState(() => {
     if (!firstTime || pictures.length == 1) {
       return;
     }
@@ -24,7 +24,7 @@ function Carousel({ pictures }: { pictures: string[] }) {
         setCurrentIndex(pictures.length - 2);
         setTimeout(() => {
           setTransitionTime(0.5);
-        }, 50);
+        }, 20);
       }, 500);
       return;
     }
@@ -38,7 +38,7 @@ function Carousel({ pictures }: { pictures: string[] }) {
         setCurrentIndex(1);
         setTimeout(() => {
           setTransitionTime(0.5);
-        }, 50);
+        }, 20);
       }, 500);
       return;
     }
