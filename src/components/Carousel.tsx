@@ -5,21 +5,36 @@ import { useState } from "react";
 
 function Carousel({ pictures }: { pictures: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [toto] = useState(() => {
+    pictures.unshift(pictures[pictures.length - 1]);
+    pictures.push(pictures[1]);
+  });
+  function previousIndex() {
+    setCurrentIndex(
+      currentIndex - 1 >= 0 ? currentIndex - 1 : pictures.length - 1,
+    );
+  }
+  function nextIndex() {
+    setCurrentIndex(currentIndex + 1 < pictures.length ? currentIndex + 1 : 0);
+  }
   return (
     <div className="carouselContainer">
       <img
         src={leftArrow}
         alt="left arrow"
         className="leftArrow"
-        onClick={() => setCurrentIndex(currentIndex - 1)}
+        onClick={previousIndex}
       />
       <img
         src={rightArrow}
         alt="right arrow"
         className="rightArrow"
-        onClick={() => setCurrentIndex(currentIndex + 1)}
+        onClick={nextIndex}
       />
-      <div className="pictures">
+      <div
+        className="pictures"
+        style={{ transform: `translateX(${-1240 * currentIndex}px)` }}
+      >
         {pictures.map((picture, index) => (
           <img key={index} src={picture} alt={`image ${index + 1}`} />
         ))}
