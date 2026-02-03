@@ -10,6 +10,9 @@
   @media screen and (max-width: 768px) {
     min-width: 335px;
     height: 255px;
+    .pictureCount {
+      display: none;
+    }
   }
 
   .pictures {

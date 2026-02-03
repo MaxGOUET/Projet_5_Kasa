@@ -54,7 +54,7 @@ function Carousel({ pictures }: { pictures: string[] }) {
         <>
           <img src={leftArrow} className="leftArrow" onClick={previousIndex} />
           <img src={rightArrow} className="rightArrow" onClick={nextIndex} />
-          <p>
+          <p className="pictureCount">
             {currentIndex === 0
               ? pictures.length
               : currentIndex === extendedPictures.length - 1
