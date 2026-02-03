@@ -4,9 +4,9 @@ import rightArrow from "../assets/arrow_right.svg";
 import { useMemo, useState } from "react";
 
 function Carousel({ pictures }: { pictures: string[] }) {
+  const largeur = document.querySelector(".pictures")?.clientWidth || 1240;
   const [currentIndex, setCurrentIndex] = useState(1);
   const [transitionTime, setTransitionTime] = useState(0.5);
-  const largeur = document.querySelector(".pictures")?.clientWidth || 1240;
 
   // On crée un tableau interne sans modifier les props
   const extendedPictures = useMemo(() => {
