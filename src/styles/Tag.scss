@@ -1,9 +1,22 @@
-.tag {
-  display: inline-block;
-  background-color: #ff6060;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  margin-right: 5px;
+.tagsContainer {
+  display: flex;
+  gap: 10px;
+  .tag {
+    background-color: #ff6060;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 115px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+    @media screen and (max-width: 768px) {
+      font-size: 10px;
+      width: 84px;
+      height: 18px;
+    }
+  }
 }

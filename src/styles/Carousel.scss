@@ -1,12 +1,16 @@
 .carouselContainer {
   margin-bottom: 20px;
   padding: 0;
-  width: 1240px;
+  max-width: 1240px;
   height: 400px;
   display: flex;
   overflow: hidden;
   position: relative;
   border-radius: 10px;
+  @media screen and (max-width: 768px) {
+    min-width: 335px;
+    height: 255px;
+  }
 
   .pictures {
     width: 100%;
@@ -14,9 +18,18 @@
     display: flex;
     align-items: center;
 
-    & img {
-      width: 1240px;
-      height: fit-content;
+    .pictureItem {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+      }
     }
   }
   p {
@@ -27,6 +40,10 @@
     color: white;
     font-size: 1rem;
     z-index: 10;
+    @media screen and (max-width: 768px) {
+      font-size: 0.8rem;
+      bottom: 10px;
+    }
   }
   .leftArrow,
   .rightArrow {
@@ -36,6 +53,10 @@
     top: 45%;
     cursor: pointer;
     z-index: 10;
+    @media screen and (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
   }
   .leftArrow {
     left: 5%;

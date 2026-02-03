@@ -2,7 +2,7 @@ import "../styles/Tag.scss";
 
 function Tags({ tags }: { tags: string[] }) {
   return (
-    <div className="tags_container">
+    <div className="tagsContainer">
       {tags.map((tag, index) => (
         <div key={index} className="tag">
           {tag}

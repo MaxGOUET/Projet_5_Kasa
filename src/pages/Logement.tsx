@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel";
 import { Navigate, useParams } from "react-router";
 import "../styles/Logement.scss";
 import Collapsible from "../components/Collapsible";
+import Rating from "../components/Rating";
 
 interface LogementType {
   id: string;
@@ -38,15 +39,14 @@ function Logement() {
             <h1>{logement.title}</h1>
             <p>{logement.location}</p>
           </div>
-          <div className="tagsContainer">
-            <Tags tags={logement.tags} />
-          </div>
+          <Tags tags={logement.tags} />
         </div>
         <div className="hostInfos">
           <div className="hostContainer">
             <p>{logement.host.name}</p>
             <img src={logement.host.picture} alt={logement.host.name} />
           </div>
+          <Rating rating={logement.rating} />
         </div>
       </div>
       <div className="logementDetails">
