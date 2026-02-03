@@ -11,6 +11,11 @@ footer {
     width: 122px;
   }
   p {
-    text-wrap: nowrap;
+    width: 100%;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      width: 200px;
+      text-wrap: nowrap;
+    }
   }
 }
