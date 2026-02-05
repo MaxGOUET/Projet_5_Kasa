@@ -7,6 +7,9 @@
   overflow: hidden;
   position: relative;
   border-radius: 10px;
+  .pictureCount {
+    font-weight: 700;
+  }
   @media screen and (max-width: 768px) {
     min-width: 335px;
     height: 255px;

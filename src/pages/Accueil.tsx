@@ -1,4 +1,5 @@
-import App from "../components/App.tsx";
+import logements from "../datas/logements.json";
+import Thumbnails from "../components/Thumbnails";
 import Banner from "../components/Banner.tsx";
 import bannerImage from "../assets/banner_plage.png";
 import "../styles/Accueil.scss";
@@ -14,7 +15,16 @@ function Accueil() {
           </>
         }
       />
-      <App />
+      <div className="thumbnails_container">
+        {logements.map((logement) => (
+          <Thumbnails
+            key={logement.id}
+            logementId={logement.id}
+            imgSrc={logement.cover}
+            title={logement.title}
+          />
+        ))}
+      </div>
     </div>
   );
 }

@@ -4,7 +4,6 @@ import rightArrow from "../assets/arrow_right.svg";
 import { useEffect, useMemo, useState } from "react";
 
 function Carousel({ pictures }: { pictures: string[] }) {
-  const largeur = document.querySelector(".pictures")?.clientWidth || 1240;
   const [currentIndex, setCurrentIndex] = useState(pictures.length > 1 ? 2 : 0);
   const [transitionTime, setTransitionTime] = useState(0.5);
   useEffect(() => {
@@ -68,7 +67,7 @@ function Carousel({ pictures }: { pictures: string[] }) {
       <div
         className="pictures"
         style={{
-          transform: `translateX(${-largeur * currentIndex}px)`,
+          transform: `translateX(${-100 * currentIndex}%)`,
           transition: `transform ${transitionTime}s`,
         }}
       >
