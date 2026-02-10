@@ -14,7 +14,6 @@ function Carousel({ pictures }: { pictures: string[] }) {
     }
   }, [pictures]);
 
-  // On crée un tableau interne sans modifier les props
   const extendedPictures = useMemo(() => {
     if (pictures.length <= 1) return pictures;
 
